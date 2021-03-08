@@ -1,0 +1,61 @@
+
+
+<%= notice %>
+
+<%= form_for  @detail do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br><br>
+
+
+  <%= f.label :count %>
+  <%= f.text_field :count %>
+  <br><br>
+
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <br><br>
+
+
+  <%= f.label :weight %>
+  <%= f.range_field   :weight ,in: 1..100  %>
+  <br><br>
+
+
+  <%= f.label :purchasedate %>
+  <%= f.date_select :purchasedate %>
+  <br><br>
+
+  <%= f.label :color,'What is color of this item  ? ' %>
+  <%= f.label  "Red" , for: 'red'%>
+  <%= f.radio_button :color , "red" ,id: 'red' %>
+  <%= f.label  "Green" , for: 'green'%>
+  <%= f.radio_button :color , "green",id: 'green' %>
+  <%= f.label  "Blue" , for: 'blue'%>
+  <%= f.radio_button :color , "blue",id: 'blue' %>
+  <br><br>
+
+
+
+  <%= f.label :whocan,'Who can purchase this item ? ' %>
+  <%= f.select :whocan , ["Age under 10 ","Age above 10 and under 20 ","Age above 20"] %>
+  <br><br>
+
+
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+  <br><br>
+
+
+
+  <%= f.submit "Save" %>
+
+
+<% end  %>
+

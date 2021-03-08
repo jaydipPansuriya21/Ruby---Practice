@@ -1,0 +1,44 @@
+
+
+
+<p>Find All data of products in below tabel  &nbsp &nbsp <%= link_to 'Add details',new_details_path %> <p>
+
+<table border="3">
+<tr>
+  <th>Name</th>
+  <th>Colour</th>
+  <th>Description</th>
+  <th>Who can do this</th>
+  <th>date</th>
+  <th>message</th>
+  <th>price</th>
+  <th>weight</th>
+
+</tr>
+
+
+
+  <% @detail.each do |item| %>
+
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.color %></td>
+      <td><%= item.description %></td>
+      <td><%= item.whocan %></td>
+      <td><%= item.purchasedate %></td>
+      <td><%= item.message %></td>
+      <td><%= item.price %></td>
+      <td><%= item.weight %></td>
+
+
+
+    </tr>
+
+
+
+  <% end %>
+
+
+
+
+</table>
